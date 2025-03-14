@@ -13,7 +13,7 @@ impl zed::Extension for TerragruntLsExtension {
     ) -> zed_extension_api::Result<zed_extension_api::Command> {
         let path = worktree
             .which("terragrunt-ls")
-            .ok_or_else(|| "The LSP for gitlab-ci 'terragrunt-ls' is not installed".to_string())?;
+            .ok_or_else(|| "The LSP for Terragrunt 'terragrunt-ls' is not installed".to_string())?;
 
         Ok(zed::Command {
             command: path,
