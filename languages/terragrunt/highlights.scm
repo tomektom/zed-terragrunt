@@ -157,3 +157,12 @@
       (variable_expr
         (identifier) @type
         (#any-of? @type "bool" "string" "number" "object" "tuple" "list" "map" "set" "any"))))
+
+; Terragrunt specific
+; more visible values, dependency & feature
+(expression
+  (variable_expr
+    (identifier) @type
+    (#any-of? @type "values" "dependency" "feature"))
+  (get_attr
+    (identifier) @variable))
